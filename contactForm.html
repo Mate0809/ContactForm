@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="contactForm.css">
+    <script src="jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="contactForm.js"></script>
+    
+</head>
+
+<body>
+    <div class="contact-container">
+        <header>
+            <h1>Contact Us</h1>
+        </header>
+
+        <section class="data-container">
+            <form>
+
+                <label id="nameLabel" for="name">Name</label>
+                <input type="text" id="name">
+                <hr id="hrName">
+
+                <label for="email">E-mail</label>
+                <input type="text" id="email">
+                <hr id="hrEmail">
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject">
+                <hr>
+
+                <label for="message">Message</label>
+                <textarea id="message"></textarea>
+
+                <input type="button" id="sendBtn" value="SEND">
+
+            </form>
+        </section>
+    </div>
+
+</body>
+
+</html>
