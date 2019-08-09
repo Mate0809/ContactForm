@@ -4,7 +4,7 @@ body {
 
 .contact-container {
     width: 100%;
-    height: 1000px;
+    height: 800px;
     border-radius: 10px;
     border: 5px solid #000000;
 }
@@ -21,9 +21,9 @@ h1 {
 }
 
 .data-container {
-    height: 800px;
+    height: 600px;
     padding: 50px;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 5px 5px;
 }
 
 label {
@@ -57,7 +57,7 @@ textarea {
     resize: none;
 }
 
-input[type=button] {
+input[type=submit] {
     width: 200px;
     height: 30px;
     margin: 10px 0 0 50px;
@@ -67,6 +67,12 @@ input[type=button] {
     border: none;
     border-radius: 5px;
 }
-input[type=button]:hover {
+input[type=submit]:hover {
     background: grey;
+}
+
+.warning {
+    font-weight: bold;
+    color: #ff0000;
+    margin-left: 55%;
 }
