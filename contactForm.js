@@ -1,14 +1,14 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $("#name").focus(function() {
-         $("#hrName").css("border", "2px solid #000000");
+    $("#name").focus(function () {
+        $("#hrName").css("border", "2px solid #000000");
     });
 
-    $("#email").focus(function() {
+    $("#email").focus(function () {
         $("#hrEmail").css("border", "2px solid #000000");
-   });
-   
-   $("#subject").focus(function() {
+    });
+
+    $("#subject").focus(function () {
         $("#hrSubject").css("border", "2px solid #000000");
     });
 
@@ -21,7 +21,10 @@ function validation() {
     var email = document.getElementById("email").value;
     var message = document.getElementById("message").value;
     var subject = document.getElementById("subject").value;
-    
+
+    var box = document.getElementById("box");
+
+    var regEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
     if (name == "") {
@@ -32,11 +35,15 @@ function validation() {
         document.getElementById("nameWarn").innerHTML = "";
     }
 
-    if (email == "" ) {
+    if (email == "") {
         document.getElementById("emailWarn").innerHTML = "Email is required";
         document.getElementById("hrEmail").style.border = "2px solid #ff0000";
         return false;
-     } else if (email != "") {
+    } else if (!regEx.test(email)) {
+        document.getElementById("emailWarn").innerHTML = "Invalid email";
+        document.getElementById("hrEmail").style.border = "2px solid #ff0000";
+        return false;
+    } else if (email != "") {
         document.getElementById("emailWarn").innerHTML = "";
     }
 
@@ -48,14 +55,12 @@ function validation() {
         document.getElementById("subjectWarn").innerHTML = "";
     }
 
-    if (message == "" ) {
+    if (message == "") {
         document.getElementById("messageWarn").innerHTML = "The message field cannot be empty";
         return false;
-     } else if (message != "") {
+    } else if (message != "") {
         document.getElementById("messageWarn").innerHTML = "";
-        return alert("Message sent!");
+        box.style.display = "block";
+        return true;
     }
-
-
-
 }

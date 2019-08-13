@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="contactForm.css">
     <script src="jquery-3.4.1.js"></script>
     <script type="text/javascript" src="contactForm.js"></script>
-    
+
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                 <label for="name"> Name <span id="nameWarn" class="warning"></span> </label>
                 <input type="text" id="name">
                 <hr id="hrName">
-                
+
 
                 <label for="email"> E-mail <span id="emailWarn" class="warning"></span> </label>
                 <input type="text" id="email">
@@ -39,6 +39,12 @@
 
             </form>
         </section>
+
+        <div id="box">
+            <span id="box-content">message sent</span>
+            <input id="boxBtn" type="submit" value="OK" onclick="location.reload(true)">
+        </div>
+
     </div>
 
 </body>
